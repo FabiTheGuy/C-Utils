@@ -102,6 +102,29 @@ int array_compare(int* array1, int* array2, size_t array1_size, size_t array2_si
 }
 
 
+/* Description: Returns the index of the search_pattern in the array
+ * Parameters:
+ *  - int* array: the first entry of the array
+ *  - size_t array_size: size of the complete array
+ *  - int search_pattern: the value after which is searched
+ * Returns:
+ *  - int: x = the index of the the searched value
+ *  - int: -1 = no value was found
+ */
+int array_get_index(int* array, size_t array_size, int search_pattern)
+{
+    unsigned int i;
+    for (i = 0; i < array_size; i++)
+    {
+        if (array[i] == search_pattern)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
 /* Description: Creates a clone of the given array
  * Parameters:
  *  - int* array: the first entry of the array

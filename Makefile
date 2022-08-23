@@ -11,8 +11,8 @@ CC = gcc
 #  - flto: 
 CFLAGS = -std=c11 -Wall -Wextra -Wpedantic -O2 -flto
 
-# all object files (uncomment to add files!)
-# OBJ = 
+# all object files
+OBJ = main.o arrays.o
 SOBJ = $(addprefix src/,$(addsuffix ,$(OBJ)))
 
 # build target executable
